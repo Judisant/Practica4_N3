@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="practica4.js"></script>
+    
+</head>
+<body>
+    <h3 id="texto">Carga de fichero de video</h3>
+    <input type="file" id="file" name="file" accept="video/mp4, video/ogv, video/webm"
+    onchange="handleFileSelect(event)" />
+    
+    <div id="contenedor" hidden>
+        <figure>
+            <video width="600" id="video" autoplay controls>
+            </video>
+        </figure>
+        <button
+    onclick="document.getElementById('video').play();">Reproducir</button>
+     <button
+    onclick="document.getElementById('video').pause();">Pausa</button>
+     <button onclick="document.getElementById('video').volume +=
+    0.1;">Subir Volumen</button>
+        <button onclick="document.getElementById('video').volume -=
+    0.1;">Bajar Volumen</button>
+    </div>
+</body>
+</html>
